@@ -1,3 +1,4 @@
+<% if enhanced_cart.any? %>
 <section class="cart-show">
 
   <header class="page-header">
@@ -50,3 +51,11 @@
   </div>
 
 </section>
+<% else %>
+<div class="alert alert-info text-center mt-5">
+<h3>Your cart is currently empty.</h3>
+<p>
+<%= link_to "Continue Shopping", root_path, class: "btn btn-primary mt-3" %>
+</p>
+</div>
+<% end %>
