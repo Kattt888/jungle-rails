@@ -1,0 +1,17 @@
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-2">
+      <%= image_tag line_item.product.image.thumb.url, class: "img-fluid rounded-start" %>
+    </div>
+    <div class="col-md-10">
+      <div class="card-body">
+        <h5 class="card-title"><%= line_item.product.name %></h5>
+        <p class="card-text"><%= line_item.product.description %></p>
+        <p class="card-text">
+          Quantity: <%= line_item.quantity %><br>
+          Line Total: <%= number_to_currency(line_item.quantity * line_item.product.price) %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
